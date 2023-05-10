@@ -14,12 +14,12 @@
         <button @click="add()" >aggiungi</button>
         
         <ul>
-            
-            <li  v-for="(datoCorrente, indice) in card ">{{ datoCorrente.text }}<span @click="remuve(indice)"> &#10060</span> </li>
+            <li  v-for="(datoCorrente, indice) in card" :class="addClass(datoCorrente)">
+                {{ datoCorrente.text }}
+                <button @click="change(indice)" >&#9989</button>
+                <button @click="remuve(indice)"> &#10060</button>
+            </li>
         </ul>
-        
-
-        <button @click="controllo()">controllo</button>
     </section>
 
 

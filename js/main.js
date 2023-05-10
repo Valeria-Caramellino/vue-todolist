@@ -30,18 +30,24 @@ createApp({
     },
 
     methods: {
-        controllo(){
-            console.log(this.card)
-        },
-       
         add() {
             let toAdd = { ...this.nuovoDato }
             this.card.push(toAdd)
+            this.nuovoDato.text=""
             
         },
        remuve(indice){
              this.card.splice(indice, 1)
             
+        },
+        change(indice){
+            this.card[indice].done = !this.card[indice].done 
+        },
+        addClass(datoCorrente){
+            classe = "linea";
+            if(datoCorrente.done == true){
+                return classe;
+            }
         },
     }
     

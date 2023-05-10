@@ -20,8 +20,11 @@
             
             
             <ul>
-                <li  v-for="(datoCorrente, indice) in card" :class="addClass(datoCorrente)">
-                    {{ datoCorrente.text }}
+                <li  v-for="(datoCorrente, indice) in card" :class="addClass(datoCorrente)" >
+                    <span @click="remuve(indice)">
+                       {{ datoCorrente.text }} 
+                    </span>
+                     
                     <button @click="change(indice)" >&#9989</button>
                     <button @click="remuve(indice)"> &#10060</button>
                 </li>

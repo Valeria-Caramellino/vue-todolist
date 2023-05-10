@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="app">
+        <h1 >cose da fare </h1>
+        <input v-model="nuovoDato.text" type="text "@keyUp.enter="add()" placeholder="aggiungi cose da fare">
+        <button @click="add()" >aggiungi</button>
+        
+        <ul>
+            
+            <li  v-for="(datoCorrente, indice) in card ">{{ datoCorrente.text }}<span @click="remuve(indice)"> &#10060</span> </li>
+        </ul>
+        
+
+        <button @click="controllo()">controllo</button>
+    </section>
+
+
+
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

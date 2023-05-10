@@ -11,17 +11,17 @@
     <section id="app">
         <section class="container">
            
-            <h1 >cose da fare </h1>
+            <h1 >COSE DA FARE</h1>
             
             <div class="sectionInput">
-                <input v-model="nuovoDato.text" type="text "@keyUp.enter="add()" placeholder="aggiungi cose da fare">
-                <button @click="add()" >aggiungi</button>
+                <input v-model="nuovoDato.text" type="text "@keyUp.enter="add()" placeholder="Aggiungi cose da fare">
+                <button @click="add()">+</button>
             </div>
             
             
             <ul>
                 <li  v-for="(datoCorrente, indice) in card" :class="addClass(datoCorrente)" >
-                    <span @click="remuve(indice)">
+                    <span @click="change(indice)">
                        {{ datoCorrente.text }} 
                     </span>
                      

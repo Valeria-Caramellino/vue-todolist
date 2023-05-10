@@ -4,9 +4,7 @@ const {createApp} = Vue
 createApp({
     data() {
       return {
-        testo:"",
         classe:"",
-        testoCorrente: 0,
         nuovoDato:{
                 text: "",
                 done:false,
@@ -18,7 +16,7 @@ createApp({
            },
            {
             text: "lavatrice",
-            done: false,
+            done: true,
            },
            {
             text: "meccanico",
